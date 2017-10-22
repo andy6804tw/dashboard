@@ -18,43 +18,131 @@ body {
   top: 0;
   bottom: 0;
 
-nav{
-  padding-top: 100px;//上方狀態邊界
-    a{
-    display: block; //區塊
-    color: $grayDark; //字體顏色
-    text-decoration: none; //連結底線
-    padding: 15px 30px; //上左邊界
-    font-weight: 300; //字體粗細
-    transition: all 0.5s ease-in-out; //懸浮顏色延遲動作
+  nav{
+    padding-top: 100px;//上方狀態邊界
+      a{
+      display: block; //區塊
+      color: $grayDark; //字體顏色
+      text-decoration: none; //連結底線
+      padding: 15px 30px; //上左邊界
+      font-weight: 300; //字體粗細
+      transition: all 0.2s ease-in-out; //懸浮顏色延遲動作
 
-    .fa{
-      color: $grayDark; //icon顏色
-      font-size: 1.4rem; //icon大小 1rem=16px
-      margin-right: 0.8rem;
-      display: inline-block;
-      width: 30px;
-      position: relative;
-      top: 2px;
-    }
+        .fa{
+          color: $grayDark; //icon顏色
+          font-size: 1.4rem; //icon大小 1rem=16px
+          margin-right: 0.8rem;
+          display: inline-block;
+          width: 30px;
+          position: relative;
+          top: 2px;
+        }
 
-    &:hover{
-      background: $purpleDark;
-      border-left: 5px solid $greenNeon; //左邊邊條
-      padding: 15px 30px 15px 25px; //上左下右邊界
-      .fa{
-        color: $greenNeon;
+        &:hover{
+          background: $purpleDark;
+          border-left: 5px solid $greenNeon; //左邊邊條
+          padding: 15px 30px 15px 25px; //上左下右邊界
+          .fa{
+            color: $greenNeon;
+          }
+        }
+
+        &.active{ //設定class
+          background: $purpleDark;
+          border-left: 5px solid $greenNeon; //左邊邊條
+          padding: 15px 30px 15px 25px; //上左下右邊界
+          
+        }
+
       }
-    }
+  }
 
-    &.active{ //設定class
-      background: $purpleDark;
-      border-left: 5px solid $greenNeon; //左邊邊條
-      padding: 15px 30px 15px 25px; //上左下右邊界
-      
-    }
-
-    }
 }
 
+header{
+  margin-left: 280px;
+  padding: 10px;
+  background: #fff;
+
+  .search-area{
+    display: inline-block;
+    width: 50%;
+
+    .fa{
+      color: $grayDark;
+    }
+    input[type="text"]{  //設定輸入框
+      background: transparent;
+      border: none;
+      font-size: 1.3rem;
+      padding: 10px;
+      font-weight: 100; //字體粗細
+      width: 80%;
+      transition: all 0.5 ease-in-out; //動畫效果
+      &:hover{ //游標停懸
+        background: $grayLight;
+      }
+    }
+  }
+  .user-area{
+    display: inline-block; //一個區塊
+    float: right; //向右對齊
+    padding: 10px;
+    a{
+      color: #1b1b1b;
+      display: inline-block;
+      padding-right: 20px;
+      text-decoration: none;
+      vertical-align: top;
+      height: 30px;
+
+      &.add{ 
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 7px; 
+      }
+
+      &.notification{
+        position: relative;
+        padding-top: 5px;
+        font-size: 20px;
+
+          .circle{ //通知的圓形
+            background: red;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%; //圓形
+            display: inline-block;
+            font-size: 11px;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 3px;
+            left: 7px;
+        }
+      }
+      .user-img{
+        background: url(https://avatars1.githubusercontent.com/u/20473922?v=4&s=400) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .fa-caret-down{
+        position: relative;
+        top: -8px;
+      }
+    }
+  }
+}
+
+//移除框框外面藍色
+input:focus,
+textarea:focus{
+    outline: none;
 }
