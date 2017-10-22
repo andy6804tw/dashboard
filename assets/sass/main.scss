@@ -1,0 +1,60 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+
+*{
+  box-sizing:  border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+   background: $grayLight;
+}
+
+#sideMenu{
+  background: $purpleLight;
+  width: 280px;
+  position: absolute; //絕對位置
+  top: 0;
+  bottom: 0;
+
+nav{
+  padding-top: 100px;//上方狀態邊界
+    a{
+    display: block; //區塊
+    color: $grayDark; //字體顏色
+    text-decoration: none; //連結底線
+    padding: 15px 30px; //上左邊界
+    font-weight: 300; //字體粗細
+    transition: all 0.5s ease-in-out; //懸浮顏色延遲動作
+
+    .fa{
+      color: $grayDark; //icon顏色
+      font-size: 1.4rem; //icon大小 1rem=16px
+      margin-right: 0.8rem;
+      display: inline-block;
+      width: 30px;
+      position: relative;
+      top: 2px;
+    }
+
+    &:hover{
+      background: $purpleDark;
+      border-left: 5px solid $greenNeon; //左邊邊條
+      padding: 15px 30px 15px 25px; //上左下右邊界
+      .fa{
+        color: $greenNeon;
+      }
+    }
+
+    &.active{ //設定class
+      background: $purpleDark;
+      border-left: 5px solid $greenNeon; //左邊邊條
+      padding: 15px 30px 15px 25px; //上左下右邊界
+      
+    }
+
+    }
+}
+
+}
