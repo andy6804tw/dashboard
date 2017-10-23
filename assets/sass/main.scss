@@ -1,13 +1,14 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import "reset";
 @import "variables";
+@import "content-area";
 
 *{
   box-sizing:  border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+   font-family: 'Roboto', sans-serif;
    background: $grayLight;
 }
 
@@ -78,7 +79,7 @@ header{
       padding: 10px;
       font-weight: 100; //字體粗細
       width: 80%;
-      transition: all 0.5 ease-in-out; //動畫效果
+      transition: all 0.5s ease-in-out; //動畫效果
       &:hover{ //游標停懸
         background: $grayLight;
       }
